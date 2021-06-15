@@ -27,4 +27,17 @@ Install [FFMPEG](https://gist.github.com/wildrun0/86a890585857a36c90110cee275c45
 
 ## TODO
 - Add requirements.txt
-- Add Flask
+- Test Flask
+- Auto start Flask app
+- Configure router to forward requests to Flask
+- Add button to website
+
+
+## Start application
+
+#### Youtube livestream
+```
+raspivid -o - -t 0 -vf -hf -fps 60 -b 12000000 -rot 180 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -i - -vcodec copy -acodec aac -ab 384k -g 17 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/<code>
+```
+#### Flask
+// TODO
