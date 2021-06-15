@@ -36,6 +36,7 @@ Install [FFMPEG](https://gist.github.com/wildrun0/86a890585857a36c90110cee275c45
 ## Start application
 
 #### Youtube livestream
+Replace `<code>` with the YouTube livestream key.
 ```
 raspivid -o - -t 0 -vf -hf -fps 60 -b 12000000 -rot 180 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -i - -vcodec copy -acodec aac -ab 384k -g 17 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/<code>
 ```
