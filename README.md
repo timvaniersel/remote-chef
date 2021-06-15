@@ -2,6 +2,9 @@
 
 Internet of Knives device. Control an chef's knife from anywhere over the internet.
 
+![Remote chef keukenmes](https://github.com/timvaniersel/remote-chef/blob/main/assets/rpi-chef.jpg?raw=true)
+
+
 ## Setup
 - Raspberry Pi 4
 - Raspberry Pi Motor HAT
