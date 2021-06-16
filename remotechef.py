@@ -7,8 +7,6 @@ from adafruit_motor import stepper
 app = Flask(__name__)
 kit = MotorKit(i2c=board.I2C())
 
-### UNTESTED CODE ####
-
 @app.route("/")
 def home():
     return redirect("https://keukenmessen.com/", 301)
