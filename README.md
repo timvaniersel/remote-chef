@@ -42,7 +42,7 @@ Replace `<code>` with the YouTube livestream key.
 raspivid -o - -t 0 -vf -hf -fps 60 -b 12000000 -rot 180 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -i - -vcodec copy -acodec aac -ab 384k -g 17 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/<code>
 ```
 #### Flask
-Auto starts with WSGI / NGINX
+Auto starts with uWSGI / NGINX
 
 #### Reverse SSH tunnel
 The RPi creates a reverse SSH tunnel to a VPS server that has NGINX installed. On click there will be a GET request that is passed through to the Raspberry Pi.
